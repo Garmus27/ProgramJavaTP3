@@ -25,15 +25,15 @@ public class Funciones {
         }
     }
 
-    public void rellarArrayPorConsola(int[]array){
+    public void rellenarArrayPorConsola(int[]array){
 
         for(int i = 0; i < array.length; i++){
-            System.out.println("ingrese el elemento un elmento");
+            System.out.println("ingrese el elemento");
             array[i]=sc.nextInt();
         }
     }
 
-    public void rellarArrayPorConsola(double[]array){
+    public void rellenarArrayPorConsola(double[]array){
 
         for(int i = 0; i < array.length; i++){
             System.out.println("ingrese el elemento un elmento");
@@ -88,4 +88,19 @@ public class Funciones {
             }
         }
     }
+
+    public void ordenarArregloMenorMayor(int[] array) {
+        int n = array.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    int temp = array[j];
+                    array[j] = array[j + 1];
+                    array[j + 1] = temp;
+                }
+            }
+        }
+    }
 }
+
+
